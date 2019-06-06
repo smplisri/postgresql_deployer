@@ -47,6 +47,7 @@ usage() {
 			Usage: $scriptname -a <BitBucket/Github host alias> -j <BitBucket/Github project name> [-h <Postgres host>] [-p <Postgres port>] [-d <Postgres database>] [-b <BitBucket/Github branch>] [-s <Subdirectory>] [-w <Vertica password>] <BitBucket/Github repo> <File name>
 			
 			-a : **Required** The host alias name mentioned in the config file in the .ssh location.
+			-j : **Required** The project/name of user under where the repository is present that holds the DMLs/DDLs.
 			-h : Provide the host name for the Postgres database if it is other than localhost.
 			-p : Provide the port for the postgres if it is other than 5432.
 			-d : Provide the database name if there is any.
@@ -54,7 +55,7 @@ usage() {
 			-w : Provide the password for the database connection. If not provided the script will prompt for the password.
 			-s : Subdirectories if any within the branch where the DDLs and DMLs are placed.
 			
-			The script takes the repository name and file name as the required parameters. Also, please make sure that the EMR is able to talk to the BitBucket/Github directly using the SSH access keys. Further information is present in the following URL link on how to use the SSH keys to connect to the BitBucket/Github.
+			The script takes the repository name and file name as the required parameters. Also, please make sure that the machine is able to talk to the BitBucket/Github directly using the SSH access keys. Further information is present in the following URL link on how to use the SSH keys to connect to the BitBucket/Github.
 			
 			BitBucket -
 			https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
